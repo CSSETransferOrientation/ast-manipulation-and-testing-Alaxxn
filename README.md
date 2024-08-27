@@ -17,8 +17,7 @@ testing/regression framework. The second involves creating a simplifier to
 reduce various mathematical identities in an abstract syntax tree (AST). You
 will be required to implement reductions for the arithmetic identity and
 multiplicative identity.  There are also optional implementations
-multiplication by zero and constant folding if you would like additional
-practice. 
+multiplication by zero and constant		
 
 Our language for (most of) this assignment will be a simple arithmetic language
 that consists of numbers, addition, and multiplication.
