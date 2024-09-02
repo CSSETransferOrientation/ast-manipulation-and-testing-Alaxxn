@@ -110,6 +110,8 @@ class BinOpAst():
         Reduce additive identities
         x + 0 = x
         """
+        # ;;> This likely can't trigger because of the way you've set everything else up
+        # ;;> but being more defensive to prevent weird errors is probably not bad
         if self.val == None:
             return
             
@@ -130,7 +132,8 @@ class BinOpAst():
                         self.type = temp.type
                         self.left = temp.left
                         self.right = temp.right
-                        
+                # ;;> You want to call these first so that things propogate upwards        
+                # ;;> see the 'propogate' test I added
                 if self.left: self.left.additive_identity()
                 if self.right: self.right.additive_identity()
                 
